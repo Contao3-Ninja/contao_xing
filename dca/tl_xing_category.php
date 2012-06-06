@@ -2,17 +2,16 @@
 
 /**
  * Contao Open Source CMS
- * 
- * Modul Xing - Backend DCA tl_xing_category
+ * Copyright (C) 2005-2012 Leo Feyer
  *
- * This is the data container array for table tl_xing_category.
+ * @link http://www.contao.org
+ * @license http://www.gnu.org/licenses/lgpl-3.0.html LGPL
  *
  * PHP version 5
- * @copyright  Glen Langer 2008..2011
+ * @copyright  Glen Langer 2008..2012
  * @author     Glen Langer
  * @package    Xing
- * @license    GPL
- * @filesource
+ * @license    LGPL
  */
 
 

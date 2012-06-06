@@ -1,18 +1,17 @@
-<?php if (!defined('TL_ROOT')) die('You can not access this file directly!');
+<?php 
 
 /**
  * Contao Open Source CMS
- * 
- * Modul Xing Sprachdateien
- * 
- * Language file for table tl_xing (en).
+ * Copyright (C) 2005-2012 Leo Feyer
+ *
+ * @link http://www.contao.org
+ * @license http://www.gnu.org/licenses/lgpl-3.0.html LGPL
  *
  * PHP version 5
- * @copyright  Glen Langer 2008..2011
+ * @copyright  Glen Langer 2008..2012
  * @author     Glen Langer 
- * @package    XingLanguage
- * @license    GPL
- * @filesource
+ * @package    Xing
+ * @license    LGPL
  */
 
 
@@ -90,6 +89,16 @@ $GLOBALS['TL_LANG']['tl_xing']['67'] = 'JP Variant 6 (130x23)';
 $GLOBALS['TL_LANG']['tl_xing']['68'] = 'JP Variant 7 (100x14) Text';
 $GLOBALS['TL_LANG']['tl_xing']['69'] = 'JP Variant 8 (149x23)';
 /**
+ * Reference Buttons PT
+ */
+$GLOBALS['TL_LANG']['tl_xing']['71'] = 'PT Variant 1 (118x23)';
+$GLOBALS['TL_LANG']['tl_xing']['72'] = 'PT Variant 2 (118x23)';
+$GLOBALS['TL_LANG']['tl_xing']['73'] = 'PT Variant 3 (118x23)';
+$GLOBALS['TL_LANG']['tl_xing']['74'] = 'PT Variant 4 (139x23) Premium';
+$GLOBALS['TL_LANG']['tl_xing']['75'] = 'PT Variant 5 (118x23)';
+$GLOBALS['TL_LANG']['tl_xing']['76'] = 'PT Variant 6 ( 80x15) Text';
+$GLOBALS['TL_LANG']['tl_xing']['77'] = 'PT Variant 7 (118x23)';
+/**
  * Company Button
  */
 $GLOBALS['TL_LANG']['tl_xing']['999'] = 'Company Button ( 98x23)';
@@ -107,4 +116,3 @@ $GLOBALS['TL_LANG']['tl_xing']['editheader'] = array('Edit category', 'Edit this
 $GLOBALS['TL_LANG']['tl_xing']['pasteafter'] = array('Paste at the beginning', 'Paste after question ID %s');
 $GLOBALS['TL_LANG']['tl_xing']['pastenew']   = array('Create a new profile at the beginning', 'Create a new profile after question ID %s');
 $GLOBALS['TL_LANG']['tl_xing']['toggle']     = array('Toggle visibility', 'Toggle the visibility of profil ID %s');
-?>

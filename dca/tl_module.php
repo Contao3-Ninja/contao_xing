@@ -2,17 +2,16 @@
 
 /**
  * Contao Open Source CMS
- * 
- * Modul Xing - Backend DCA tl_module
+ * Copyright (C) 2005-2012 Leo Feyer
  *
- * This file modifies the data container array of table tl_module.
+ * @link http://www.contao.org
+ * @license http://www.gnu.org/licenses/lgpl-3.0.html LGPL
  *
  * PHP version 5
- * @copyright  Glen Langer 2008..2011
+ * @copyright  Glen Langer 2008..2012
  * @author     Glen Langer
  * @package    Xing
- * @license    GPL
- * @filesource
+ * @license    LGPL
  */
 
 

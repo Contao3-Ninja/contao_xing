@@ -1,17 +1,16 @@
-<?php if (!defined('TL_ROOT')) die('You can not access this file directly!');
+<?php 
 /**
  * Contao Open Source CMS
- * 
- * Modul Xing Sprachdateien
- * 
- * Language file for modules (de).
+ * Copyright (C) 2005-2012 Leo Feyer
+ *
+ * @link http://www.contao.org
+ * @license http://www.gnu.org/licenses/lgpl-3.0.html LGPL
  *
  * PHP version 5
- * @copyright  Glen Langer 2008..2011
+ * @copyright  Glen Langer 2008..2012
  * @author     Glen Langer
- * @package    XingLanguage
- * @license    GPL
- * @filesource
+ * @package    Xing
+ * @license    LGPL
  */
 
 /**
@@ -25,5 +24,3 @@ $GLOBALS['TL_LANG']['MOD']['gl_xing'] = array('XING', 'Dieses Modul dient zum An
  */
 $GLOBALS['TL_LANG']['FMD']['xing']       = 'XING';
 $GLOBALS['TL_LANG']['FMD']['xinglist']   = array('XING-Anzeige', 'Dieses Modul dient zum Anzeigen eines XING-Banners.');
-
-?>

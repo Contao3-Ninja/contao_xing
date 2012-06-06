@@ -1,6 +1,6 @@
 <?php @error_reporting(0); @ini_set("display_errors", 0);  
 
-if (version_compare(VERSION . '.' . BUILD, '2.8.9', '>'))
+if (version_compare(VERSION, '2.99', '>'))
 {
 	try { $objDatabase = Database::getInstance(); } catch (Exception $e) { $errors[] = $e->getMessage(); }		
 	try { $objDatabase->listTables(); } catch (Exception $e) { $errors[] = $e->getMessage(); }
@@ -71,7 +71,7 @@ if (version_compare(VERSION . '.' . BUILD, '2.8.9', '>'))
 	}
 } else {
 	$objDatabase = Database::getInstance();
-	try { $objDatabase->prepare("INSERT INTO tl_log (tstamp, source, action, username, text, func, ip, browser) VALUES(?, ?, ?, ?, ?, ?, ?, ?)")->execute(time(), 'FE', 'ERROR', ($GLOBALS['TL_USERNAME'] ? $GLOBALS['TL_USERNAME'] : ''), 'ERROR: XING-Module requires at least Contao 2.9', 'ModulXing Runonce', '127.0.0.1', 'NoBrowser'); } catch (Exception $e) { $errors[] = $e->getMessage(); }
+	try { $objDatabase->prepare("INSERT INTO tl_log (tstamp, source, action, username, text, func, ip, browser) VALUES(?, ?, ?, ?, ?, ?, ?, ?)")->execute(time(), 'FE', 'ERROR', ($GLOBALS['TL_USERNAME'] ? $GLOBALS['TL_USERNAME'] : ''), 'ERROR: XING-Module requires at least Contao 3.0', 'ModulXing Runonce', '127.0.0.1', 'NoBrowser'); } catch (Exception $e) { $errors[] = $e->getMessage(); }
 }
 
 ?>
