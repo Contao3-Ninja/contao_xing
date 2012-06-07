@@ -1,29 +1,29 @@
 <?php if (!defined('TL_ROOT')) die('You cannot access this file directly!');
 /**
  * Contao Open Source CMS
- * Copyright (C) 2005-2011 Leo Feyer
+ * Copyright (C) 2005-2012 Leo Feyer
  *
  * Formerly known as TYPOlight Open Source CMS.
  *
- * Modul Banner - /system/runonce.php
+ * Modul Xing - /system/runonce.php
  * 
  * UniversalRunonce from Andreas Schempp
  *
  * PHP version 5
- * @copyright  Glen Langer 2007..2011
+ * @copyright  Glen Langer 2007..2012
  * @author     Glen Langer
- * @package    Banner 
+ * @package    Xing 
  * @license    GPL 
  */
 
 /**
  * Class UniversalRunonce
  *
- * @copyright  Andreas Schempp 2011
+ * @copyright  Andreas Schempp 2012
  * @author     Andreas Schempp <andreas@schempp.ch>
  * @license    http://opensource.org/licenses/lgpl-3.0.html
  * @version    $Id: runonce.php 2367 2011-08-08 07:55:14Z aschempp $
- * @package    Banner
+ * @package    Xing
  */
 class UniversalRunonce extends Controller
 {
