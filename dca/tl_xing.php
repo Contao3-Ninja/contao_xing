@@ -173,16 +173,16 @@ class tl_xing extends Backend
             parent::__construct();
             $this->import('BackendUser', 'User');
     }
-        
+    
 	public function listProfiles($arrRow)
 	{
         $style = 'style="font-size:11px;margin-bottom:10px;"';
 
 		$key = $arrRow['published'] ? 'published' : 'unpublished';
 		$date = date($GLOBALS['TL_CONFIG']['datimFormat'], $arrRow['tstamp']);
-	
-		$XingImage = new XingImage(); // classes/XingImage.php
-		$xing_images = $XingImage->getXingImageLink($arrRow['xinglayout']);
+		//$XingImage = new XingImage(); // classes/XingImage.php
+		$this->import('\Xing\XingImage','XingImage');
+		$xing_images = $this->XingImage->getXingImageLink($arrRow['xinglayout']);
 
 		return '
 <div class="cte_type ' . $key . '" ' . $style . '><strong>' . $arrRow['xingprofil'] . '</strong> - ' . $date . '</div>' 

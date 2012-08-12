@@ -5,7 +5,7 @@
  * 
  * Copyright (C) 2005-2012 Leo Feyer
  * 
- * @package Xing
+ * @package Gl_xing
  * @link    http://www.contao.org
  * @license http://www.gnu.org/licenses/lgpl-3.0.html LGPL
  */
@@ -16,7 +16,7 @@
  */
 ClassLoader::addNamespaces(array
 (
-	'BugBuster\Xing',
+	'BugBuster',
 ));
 
 
@@ -25,11 +25,11 @@ ClassLoader::addNamespaces(array
  */
 ClassLoader::addClasses(array
 (
-	// Classes
-	'BugBuster\Xing\XingImage'      => 'system/modules/gl_xing/classes/XingImage.php',
-
 	// Modules
 	'BugBuster\Xing\ModuleXingList' => 'system/modules/gl_xing/modules/ModuleXingList.php',
+
+	// Classes
+	'BugBuster\Xing\XingImage'      => 'system/modules/gl_xing/classes/XingImage.php',
 ));
 
 
