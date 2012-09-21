@@ -1,4 +1,4 @@
-<?php if (!defined('TL_ROOT')) die('You can not access this file directly!');
+<?php 
 
 /**
  * Contao Open Source CMS
@@ -243,4 +243,3 @@ class tl_xing extends Backend
 	}
 }
 
-?>

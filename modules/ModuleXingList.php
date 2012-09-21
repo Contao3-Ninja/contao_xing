@@ -18,7 +18,6 @@
  * Run in a custom namespace, so the class can be replaced
  */
 namespace BugBuster\Xing;
-if (!defined('TL_ROOT')) die('You can not access this file directly!');
 
 /**
  * Class ModuleXingList 
@@ -155,4 +154,3 @@ class ModuleXingList extends \Module
 	} // compile
 } // class
 
-?>

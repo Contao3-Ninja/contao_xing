@@ -1,4 +1,4 @@
-<?php if (!defined('TL_ROOT')) die('You can not access this file directly!');
+<?php 
 
 /**
  * Contao Open Source CMS
@@ -36,5 +36,3 @@ array_insert($GLOBALS['FE_MOD'], 4, array
 	)
 ));
 
-
-?>
