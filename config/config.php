@@ -8,7 +8,7 @@
  * This is the Xing configuration file.
  *
  * PHP version 5
- * @copyright  Glen Langer 2008..2011
+ * @copyright  Glen Langer 2008..2012
  * @author     Glen Langer
  * @package    Xing 
  * @license    GPL 
@@ -37,33 +37,4 @@ array_insert($GLOBALS['FE_MOD'], 4, array
 	)
 ));
 
-
-if (version_compare(VERSION . '.' . BUILD, '2.9.9', '<'))
-{
-	/**
-	 * Migration over module based runonce for contao 2.9
-	 * 
-	 * Check for exists of /system/runonce
-	 * if not, copy the module runonce therefore
-	 */
-	$runonceJob  = 'system/modules/gl_xing/config/RunonceJob.php';
-	$runonceFile = 'system/runonce.php';
-	
-	if ( (file_exists(TL_ROOT . '/' . $runonceJob)) && (!file_exists(TL_ROOT . '/' . $runonceFile)) ) 
-	{
-		//keine /system/runonce, let's go
-		$objFile = new File($runonceJob); // hier wird intern ein "TL_ROOT/" vorgesetzt
-		if ($objFile->filesize > 100) 
-		{
-			$objFiles = Files::getInstance();
-			$objFiles->copy($runonceJob,$runonceFile);
-			//
-			if (version_compare(VERSION . '.' . BUILD, '2.8.9', '>'))
-			{
-				$objFile->write("<?php // Module Migration Complete ?>");
-			}
-		}
-		$objFile->close();
-	}
-}
 ?>
