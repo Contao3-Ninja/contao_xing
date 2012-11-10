@@ -1,17 +1,17 @@
-<?php if (!defined('TL_ROOT')) die('You can not access this file directly!');
+<?php 
+
 /**
  * Contao Open Source CMS
- * 
- * Modul Xing Sprachdateien
- * 
- * Language file for explains (en).
+ * Copyright (C) 2005-2012 Leo Feyer
+ *
+ * @link http://www.contao.org
+ * @license http://www.gnu.org/licenses/lgpl-3.0.html LGPL
  *
  * PHP version 5
- * @copyright  Glen Langer 2008..2011
+ * @copyright  Glen Langer 2008..2012
  * @author     Glen Langer
- * @package    XingLanguage
- * @license    GPL
- * @filesource
+ * @package    Xing
+ * @license    LGPL
  */
 
 $GLOBALS['TL_LANG']['XPL']['xing_help_profile'] = array
@@ -93,6 +93,14 @@ $GLOBALS['TL_LANG']['XPL']['xing_help_layout'] = array
         '<pre>JP Variant 7  (100x14) <img src="http://www.xing.com/img/buttons/68_ja_btn.gif" width="100" height="14" alt="XING" title="My XING" /></pre>'.
         '<pre>JP Variant 8  (149x23) <img src="http://www.xing.com/img/buttons/69_ja_btn.gif" width="149" height="23" alt="XING" title="My XING" /></pre>'.
         '<br />'.
+        '<pre>PT Variant 1  (118x23) <img src="http://www.xing.com/img/buttons/94_pt_btn.gif" width="118" height="23" alt="XING" title="Meu XING" /></pre>'.
+        '<pre>PT Variant 2  (118x23) <img src="http://www.xing.com/img/buttons/95_pt_btn.gif" width="118" height="23" alt="XING" title="Meu XING" /></pre>'.
+        '<pre>PT Variant 3  (118x23) <img src="http://www.xing.com/img/buttons/96_pt_btn.gif" width="118" height="23" alt="XING" title="Meu XING" /></pre>'.
+        '<pre>PT Variant 4  (139x23) <img src="http://www.xing.com/img/buttons/97_pt_btn.gif" width="139" height="23" alt="XING" title="Meu XING" /></pre>'.
+        '<pre>PT Variant 5  (118x23) <img src="http://www.xing.com/img/buttons/98_pt_btn.gif" width="118" height="23" alt="XING" title="Meu XING" /></pre>'.
+        '<pre>PT Variant 6  ( 80x15) <img src="http://www.xing.com/img/buttons/99_pt_btn.gif" width="80"  height="15" alt="XING" title="Meu XING" /></pre>'.
+        '<pre>PT Variant 7  (118x23) <img src="http://www.xing.com/img/buttons/100_pt_btn.gif" width="118" height="23" alt="XING" title="Meu XING" /></pre>'.
+        '<br />'.
         '<pre>Company Button (98x23) <img src="http://www.xing.com/img/xing/xe/corporate_pages/cp_button.png" width="98" height="23" alt="XING" title="Company" /></pre>'
 	)
 );
@@ -114,4 +122,3 @@ $GLOBALS['TL_LANG']['XPL']['xing_help_template'] = array
 		'</ul>'
 	)
 );
-?>
