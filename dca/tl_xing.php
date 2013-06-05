@@ -1,23 +1,20 @@
 <?php 
 
 /**
- * Contao Open Source CMS
- * Copyright (C) 2005-2012 Leo Feyer
- *
- * @link http://www.contao.org
- * @license http://www.gnu.org/licenses/lgpl-3.0.html LGPL
+ * Contao Open Source CMS, Copyright (C) 2005-2013 Leo Feyer
  * 
- * PHP version 5
- * @copyright  Glen Langer 2008..2012
- * @author     Glen Langer
+ * @copyright  Glen Langer 2008..2013 <http://www.contao.glen-langer.de>
+ * @author     Glen Langer (BugBuster)
  * @package    Xing
  * @license    LGPL
+ * @filesource
+ * @see	       https://github.com/BugBuster1701/gl_xing
  */
 
 /**
  * Load tl_content language file
  */
-$this->loadLanguageFile('tl_content');
+//$this->loadLanguageFile('tl_content');
 
 
 /**
@@ -31,7 +28,15 @@ $GLOBALS['TL_DCA']['tl_xing'] = array
 	(
 		'dataContainer'               => 'Table',
 		'ptable'                      => 'tl_xing_category',
-		'enableVersioning'            => true
+		'enableVersioning'            => true,
+        'sql' => array
+        (
+            'keys' => array
+            (
+                'id'    => 'primary',
+                'pid'   => 'index'
+            )
+        ),
 	),
 
 	// List
@@ -45,7 +50,7 @@ $GLOBALS['TL_DCA']['tl_xing'] = array
 			'panelLayout'             => 'search,filter,limit',
 			//'headerFields'            => array('title', 'headline', 'tstamp'),
 			'headerFields'            => array('title', 'tstamp'),
-			'child_record_callback'   => array('tl_xing', 'listProfiles')
+			'child_record_callback'   => array('BugBuster\Xing\DCA_xing', 'listProfiles')
 		),
 		'global_operations' => array
 		(
@@ -90,7 +95,7 @@ $GLOBALS['TL_DCA']['tl_xing'] = array
 				'icon'                => 'visible.gif',
 				//'attributes'          => 'onclick="Backend.getScrollOffset();"',
 				'attributes'          => 'onclick="Backend.getScrollOffset(); return AjaxRequest.toggleVisibility(this, %s);"',
-				'button_callback'     => array('tl_xing', 'toggleIcon')
+				'button_callback'     => array('BugBuster\Xing\DCA_xing', 'toggleIcon')
 			),
 			'show' => array
 			(
@@ -110,6 +115,22 @@ $GLOBALS['TL_DCA']['tl_xing'] = array
 	// Fields
 	'fields' => array
 	(
+    	'id' => array
+    	(
+    	        'sql'           => "int(10) unsigned NOT NULL auto_increment"
+    	),
+    	'pid' => array
+    	(
+    	        'sql'           => "int(10) unsigned NOT NULL default '0'"
+    	),
+    	'sorting' => array
+    	(
+    	        'sql'           => "int(10) unsigned NOT NULL default '0'"
+    	),
+    	'tstamp' => array
+    	(
+    	        'sql'           => "int(10) unsigned NOT NULL default '0'"
+    	),
 		'xingprofil' => array
 		(
 			'label'                   => &$GLOBALS['TL_LANG']['tl_xing']['xingprofil'],
@@ -117,6 +138,7 @@ $GLOBALS['TL_DCA']['tl_xing'] = array
 			'search'                  => true,
 			'inputType'               => 'text',
             'explanation'	          => 'xing_help_profile',
+            'sql'                     => "varchar(64) NOT NULL default ''",
 			'eval'                    => array('mandatory'=>true, 'maxlength'=>255, 'helpwizard'=>true, 'tl_class'=>'w50')
 		),
 		'xinglayout' => array
@@ -136,6 +158,7 @@ $GLOBALS['TL_DCA']['tl_xing'] = array
 			'reference'               => &$GLOBALS['TL_LANG']['tl_xing'],
 			'search'                  => true,
 			'explanation'	          => 'xing_help_layout',
+			'sql'                     => "smallint(3) unsigned NOT NULL default '2'",
 			'eval'                    => array('mandatory'=>true, 'maxlength'=>3, 'rgxp'=>'digit', 'helpwizard'=>true, 'tl_class'=>'w50')
 		),
         'xingtarget' => array
@@ -143,6 +166,7 @@ $GLOBALS['TL_DCA']['tl_xing'] = array
 			'label'                   => &$GLOBALS['TL_LANG']['tl_xing']['xingtarget'],
 			'exclude'                 => true,
 			'inputType'               => 'checkbox',
+			'sql'                     => "char(1) NOT NULL default ''",
 			'eval'                    => array('tl_class'=>'clr')
 		),
 		'published' => array
@@ -152,94 +176,8 @@ $GLOBALS['TL_DCA']['tl_xing'] = array
 			'filter'                  => true,
 			'flag'                    => 2,
 			'inputType'               => 'checkbox',
+			'sql'                     => "char(1) NOT NULL default ''",
 			'eval'                    => array('doNotCopy'=>true)
 		)
 	)
 );
-
-
-/**
- * Class tl_xing
- *
- * Methods that are used by the DCA 
- */
-class tl_xing extends Backend
-{
-	/**
-     * Import the back end user object
-     */
-    public function __construct()
-    {
-            parent::__construct();
-            $this->import('BackendUser', 'User');
-    }
-    
-	public function listProfiles($arrRow)
-	{
-        $style = 'style="font-size:11px;margin-bottom:10px;"';
-
-		$key = $arrRow['published'] ? 'published' : 'unpublished';
-		$date = date($GLOBALS['TL_CONFIG']['datimFormat'], $arrRow['tstamp']);
-		//$XingImage = new XingImage(); // classes/XingImage.php
-		$this->import('\Xing\XingImage','XingImage');
-		$xing_images = $this->XingImage->getXingImageLink($arrRow['xinglayout']);
-
-		return '
-<div class="cte_type ' . $key . '" ' . $style . '><strong>' . $arrRow['xingprofil'] . '</strong> - ' . $date . '</div>' 
-		.$xing_images;
-		
-	}
-	
-	/**
-	 * Return the "toggle visibility" button
-	 * @param array
-	 * @param string
-	 * @param string
-	 * @param string
-	 * @param string
-	 * @param string
-	 * @return string
-	 */
-	public function toggleIcon($row, $href, $label, $title, $icon, $attributes)
-	{
-		if (strlen(Input::get('tid')))
-		{
-			$this->toggleVisibility(Input::get('tid'), (Input::get('state') == 1));
-			$this->redirect($this->getReferer());
-		}
-		
-		// Check permissions AFTER checking the tid, so hacking attempts are logged
-        if (!$this->User->isAdmin && !$this->User->hasAccess('tl_xing::published', 'alexf'))
-        {
-                return '';
-        }
-
-		$href .= '&amp;tid='.$row['id'].'&amp;state='. ($row['published'] ? '' : 1);
-
-		if (!$row['published'])
-		{
-			$icon = 'invisible.gif';
-		}		
-
-		return '<a href="'.$this->addToUrl($href.'&amp;id='.Input::get('id')).'" title="'.specialchars($title).'"'.$attributes.'>'.$this->generateImage($icon, $label).'</a> ';
-	}
-	
-	/**
-	 * Disable/enable xing profile
-	 * @param integer
-	 * @param boolean
-	 */
-	public function toggleVisibility($intId, $blnVisible)
-	{
-	    // Check permissions to publish	    
-        if (!$this->User->isAdmin && !$this->User->hasAccess('tl_xing::published', 'alexf'))
-        {
-			$this->log('Not enough permissions to publish/unpublish Xing Profile ID "'.$intId.'"', 'tl_xing toggleVisibility', TL_ERROR);
-			$this->redirect('contao/main.php?act=error');
-        }
-		// Update database
-		$this->Database->prepare("UPDATE tl_xing SET published='" . ($blnVisible ? 1 : '') . "' WHERE id=?")
-					   ->execute($intId);
-	}
-}
-
