@@ -1,18 +1,14 @@
-<?php if (!defined('TL_ROOT')) die('You can not access this file directly!');
+<?php 
 
 /**
- * Contao Open Source CMS
- * 
- * Modul Xing - Backend DCA tl_xing_category
+ * Contao Open Source CMS, Copyright (C) 2005-2015 Leo Feyer
  *
- * This is the data container array for table tl_xing_category.
- *
- * PHP version 5
- * @copyright  Glen Langer 2008..2011
- * @author     Glen Langer
+ * @copyright  Glen Langer 2008..2015 <http://contao.ninja>
+ * @author     Glen Langer (BugBuster)
  * @package    Xing
- * @license    GPL
+ * @license    LGPL
  * @filesource
+ * @see	       https://github.com/BugBuster1701/contao_xing
  */
 
 
@@ -28,7 +24,14 @@ $GLOBALS['TL_DCA']['tl_xing_category'] = array
 		'dataContainer'               => 'Table',
 		'ctable'                      => array('tl_xing'),
 		'switchToEdit'                => true,
-		'enableVersioning'            => true
+		'enableVersioning'            => true,
+        'sql' => array
+        (
+            'keys' => array
+            (
+                'id'    => 'primary'
+            )
+        ),
 	),
 
 	// List
@@ -95,15 +98,23 @@ $GLOBALS['TL_DCA']['tl_xing_category'] = array
 	// Fields
 	'fields' => array
 	(
+    	'id' => array
+    	(
+	        'sql'                     => "int(10) unsigned NOT NULL auto_increment"
+    	),
+    	'tstamp' => array
+    	(
+	        'sql'                     => "int(10) unsigned NOT NULL default '0'"
+    	),
 		'title' => array
 		(
 			'label'                   => &$GLOBALS['TL_LANG']['tl_xing_category']['title'],
 			'exclude'                 => true,
 			'search'                  => true,
 			'inputType'               => 'text',
+			'sql'                     => "varchar(255) NOT NULL default ''",
 			'eval'                    => array('mandatory'=>true, 'maxlength'=>255, 'tl_class'=>'w50')
 		),
 	)
 );
 
-?>

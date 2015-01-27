@@ -1,18 +1,14 @@
-<?php if (!defined('TL_ROOT')) die('You can not access this file directly!');
+<?php 
 
 /**
- * Contao Open Source CMS
- * 
- * Modul Xing Config - Backend
+ * Contao Open Source CMS, Copyright (C) 2005-2015 Leo Feyer
  *
- * This is the Xing configuration file.
- *
- * PHP version 5
- * @copyright  Glen Langer 2008..2012
- * @author     Glen Langer
- * @package    Xing 
- * @license    GPL 
+ * @copyright  Glen Langer 2008..2015 <http://contao.ninja>
+ * @author     Glen Langer (BugBuster)
+ * @package    Xing
+ * @license    LGPL
  * @filesource
+ * @see	       https://github.com/BugBuster1701/contao_xing
  */
 
 
@@ -22,7 +18,7 @@
 $GLOBALS['BE_MOD']['content']['gl_xing'] = array
 (
 	'tables' => array('tl_xing_category', 'tl_xing'),
-	'icon'   => 'system/modules/gl_xing/html/icon.gif'
+	'icon'   => 'system/modules/xing/assets/icon.gif'
 );
 
 
@@ -33,8 +29,7 @@ array_insert($GLOBALS['FE_MOD'], 4, array
 (
 	'xing' => array
 	(
-		'xinglist'   => 'ModuleXingList'
+		'xinglist'   => 'Xing\ModuleXingList'
 	)
 ));
 
-?>
