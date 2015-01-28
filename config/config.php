@@ -15,7 +15,7 @@
 /**
  * Add back end modules
  */
-$GLOBALS['BE_MOD']['content']['gl_xing'] = array
+$GLOBALS['BE_MOD']['content']['xing'] = array
 (
 	'tables' => array('tl_xing_category', 'tl_xing'),
 	'icon'   => 'system/modules/xing/assets/icon.gif'
