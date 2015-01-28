@@ -1,0 +1,46 @@
+{
+	"name":"bugbuster/contao-xing",
+	"description":"Contao module Xing",
+	"keywords":["contao","xing","banner"],
+	"type":"contao-module",
+	"homepage":"http://contao.ninja",
+	"license":"LGPL-3.0+",
+	"authors":[
+		{
+			"name":"Glen Langer",
+			"homepage":"http://contao.ninja",
+			"role":"Developer"
+		}
+	],
+	"support":{
+		"issues":"https://github.com/BugBuster1701/contao_xing/issues",
+		"irc":"irc://irc.freenode.org/contao.dev",
+		"source":"https://github.com/BugBuster1701/contao_xing",
+		"wiki":"http://de.contaowiki.org/Xing",
+		"forum":"https://community.contao.org/de/forumdisplay.php?119"
+	},
+	"require":{
+		"php":">=5.3",
+		"contao/core":">=3.2.1,<4",
+		"contao-community-alliance/composer-plugin": "*"
+	},
+	"autoload":{
+		"classmap":[""]
+	},
+	"replace":{
+		"contao-legacy/gl_xing":"self.version"
+	},
+	"extra":{
+		"contao":{
+			"sources":{
+				"":"system/modules/xing"
+			},
+			"transifex": {
+				"project": "contao-xing",
+				"prefix": "master-",
+				"languages_cto": "languages",
+				"languages_tx": ".tx"
+			}
+		}
+	}
+}

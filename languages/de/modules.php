@@ -1,26 +1,20 @@
-<?php 
+<?php
 /**
- * Contao Open Source CMS
- * Copyright (C) 2005-2012 Leo Feyer
+ * Translations are managed using Transifex. To create a new translation
+ * or to help to maintain an existing one, please register at transifex.com.
  *
- * @link http://www.contao.org
+ * @link http://help.transifex.com/intro/translating.html
+ * @link https://www.transifex.com/projects/p/contao-xing/language/de/
+ *
  * @license http://www.gnu.org/licenses/lgpl-3.0.html LGPL
  *
- * PHP version 5
- * @copyright  Glen Langer 2008..2012
- * @author     Glen Langer
- * @package    Xing
- * @license    LGPL
+ * last-updated: 2015-01-26T23:50:57+01:00
  */
 
-/**
- * Back end modules
- */
-$GLOBALS['TL_LANG']['MOD']['gl_xing'] = array('XING', 'Dieses Modul dient zum Anlegen eines XING-Banners.');
 
+$GLOBALS['TL_LANG']['FMD']['xing']          = 'XING';
+$GLOBALS['TL_LANG']['FMD']['xinglist']['0'] = 'XING-Anzeige';
+$GLOBALS['TL_LANG']['FMD']['xinglist']['1'] = 'Dieses Modul dient zum Anzeigen eines XING-Banners.';
+$GLOBALS['TL_LANG']['MOD']['gl_xing']['0']  = 'XING';
+$GLOBALS['TL_LANG']['MOD']['gl_xing']['1']  = 'Dieses Modul dient zum Anlegen eines XING-Banners.';
 
-/**
- * Front end modules
- */
-$GLOBALS['TL_LANG']['FMD']['xing']       = 'XING';
-$GLOBALS['TL_LANG']['FMD']['xinglist']   = array('XING-Anzeige', 'Dieses Modul dient zum Anzeigen eines XING-Banners.');

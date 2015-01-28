@@ -1,14 +1,14 @@
 <?php 
 
 /**
- * Contao Open Source CMS, Copyright (C) 2005-2013 Leo Feyer
+ * Contao Open Source CMS, Copyright (C) 2005-2015 Leo Feyer
  * 
- * @copyright  Glen Langer 2008..2013 <http://www.contao.glen-langer.de>
+ * @copyright  Glen Langer 2008..2015 <http://contao.ninja>
  * @author     Glen Langer (BugBuster)
  * @package    Xing
  * @license    LGPL
  * @filesource
- * @see	       https://github.com/BugBuster1701/gl_xing
+ * @see	       https://github.com/BugBuster1701/contao_xing
  */
 
 /**
