@@ -14,8 +14,6 @@
 /**
  * Load tl_content language file
  */
-//$this->loadLanguageFile('tl_content');
-
 
 /**
  * Table tl_xing 

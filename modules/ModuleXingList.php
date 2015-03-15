@@ -81,7 +81,6 @@ class ModuleXingList extends \Module
 		// Return if there are no categories
 		if (!is_array($this->xing_category) || !is_numeric($this->xing_category[0]))
 		{
-		    //$this->log('no category found', 'XingList', TL_ERROR);
 			return '';
 		}
 
