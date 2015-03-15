@@ -28,7 +28,7 @@
 		"classmap":[""]
 	},
 	"replace":{
-		"contao-legacy/gl_xing":"self.version"
+		"contao-legacy/gl_xing":"*"
 	},
 	"extra":{
 		"contao":{
