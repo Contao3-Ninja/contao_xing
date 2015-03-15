@@ -47,7 +47,7 @@ class ModuleXingList extends \Module
 	/**
 	 * Current version of the class.
 	 */
-	const XingList_VERSION = '3.0.0';
+	const XINGLIST_VERSION = '3.0.0';
 
 
 	/**
