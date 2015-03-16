@@ -119,7 +119,7 @@ class ModuleXingList extends \Module
     			$this->xing_images = preg_replace('/title="[^"]*"/', 'title="Company"', $this->xing_images);  
     		}
 
-			global $objPage;
+			global $objPage;//TODO prüfen ob $this->strFormat == 'html5' hier funktioniert
 			if ($objPage->outputFormat == 'html5')
 			{
 				$this->xing_images = \String::toHtml5($this->xing_images);
