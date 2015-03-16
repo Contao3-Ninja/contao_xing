@@ -35,7 +35,7 @@ $GLOBALS['TL_DCA']['tl_module']['fields']['xing_template'] = array
     'default'                 => 'mod_xing_list',
     'exclude'                 => true,
     'inputType'               => 'select',
-    'options_callback'        => array('BugBuster\Xing\DCA_module_xing', 'getXingTemplates'), 
+    'options_callback'        => array('BugBuster\Xing\DcaModuleXing', 'getXingTemplates'), 
     'explanation'	          => 'xing_help_template',
     'sql'                     => "varchar(32) NOT NULL default ''",
     'eval'                    => array('helpwizard'=>true,'tl_class'=>'w50')

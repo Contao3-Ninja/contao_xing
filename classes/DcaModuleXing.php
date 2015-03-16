@@ -3,7 +3,7 @@
 /**
  * Contao Open Source CMS, Copyright (C) 2005-2015 Leo Feyer
  *
- * Contao Module "Xing" - DCA Helper Class DCA_module_xing
+ * Contao Module "Xing" - DCA Helper Class DcaModuleXing
  *
  * @copyright  Glen Langer 2008..2015 <http://contao.ninja>
  * @author     Glen Langer (BugBuster)
@@ -19,14 +19,14 @@
 namespace BugBuster\Xing;
 
 /**
- * DCA Helper Class DCA_module_xing
+ * DCA Helper Class DcaModuleXing
  *
  * @copyright  Glen Langer 2008..2015 <http://contao.ninja>
  * @author     Glen Langer (BugBuster)
  * @package    Xing
  *
  */
-class DCA_module_xing extends \Backend 
+class DcaModuleXing extends \Backend 
 {
 	public function getXingTemplates($dc)
 	{
