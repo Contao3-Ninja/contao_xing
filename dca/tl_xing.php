@@ -14,8 +14,6 @@
 /**
  * Load tl_content language file
  */
-//$this->loadLanguageFile('tl_content');
-
 
 /**
  * Table tl_xing 
@@ -50,7 +48,7 @@ $GLOBALS['TL_DCA']['tl_xing'] = array
 			'panelLayout'             => 'search,filter,limit',
 			//'headerFields'            => array('title', 'headline', 'tstamp'),
 			'headerFields'            => array('title', 'tstamp'),
-			'child_record_callback'   => array('BugBuster\Xing\DCA_xing', 'listProfiles')
+			'child_record_callback'   => array('BugBuster\Xing\DcaXing', 'listProfiles')
 		),
 		'global_operations' => array
 		(
@@ -95,7 +93,7 @@ $GLOBALS['TL_DCA']['tl_xing'] = array
 				'icon'                => 'visible.gif',
 				//'attributes'          => 'onclick="Backend.getScrollOffset();"',
 				'attributes'          => 'onclick="Backend.getScrollOffset(); return AjaxRequest.toggleVisibility(this, %s);"',
-				'button_callback'     => array('BugBuster\Xing\DCA_xing', 'toggleIcon')
+				'button_callback'     => array('BugBuster\Xing\DcaXing', 'toggleIcon')
 			),
 			'show' => array
 			(

@@ -12,7 +12,6 @@
  */
 
 
-//$GLOBALS['TL_LANG']['FMD']['xing']          = 'XING';
 $GLOBALS['TL_LANG']['FMD']['xinglist']['0'] = 'XING list';
 $GLOBALS['TL_LANG']['FMD']['xinglist']['1'] = 'With this module you can list XING-Banners in the front end.';
 $GLOBALS['TL_LANG']['MOD']['xing']['0']  = 'XING';

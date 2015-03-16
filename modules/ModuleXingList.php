@@ -47,7 +47,7 @@ class ModuleXingList extends \Module
 	/**
 	 * Current version of the class.
 	 */
-	const XingList_VERSION = '3.0.0';
+	const XINGLIST_VERSION = '3.0.0';
 
 
 	/**
@@ -81,7 +81,6 @@ class ModuleXingList extends \Module
 		// Return if there are no categories
 		if (!is_array($this->xing_category) || !is_numeric($this->xing_category[0]))
 		{
-		    //$this->log('no category found', 'XingList', TL_ERROR);
 			return '';
 		}
 
@@ -120,8 +119,7 @@ class ModuleXingList extends \Module
     			$this->xing_images = preg_replace('/title="[^"]*"/', 'title="Company"', $this->xing_images);  
     		}
 
-			global $objPage;
-			if ($objPage->outputFormat == 'html5')
+			if ($GLOBALS['objPage']->outputFormat == 'html5')
 			{
 				$this->xing_images = \String::toHtml5($this->xing_images);
 				$arrXing[] = array

@@ -27,9 +27,9 @@ ClassLoader::addClasses(array
 	'BugBuster\Xing\ModuleXingList'  => 'system/modules/xing/modules/ModuleXingList.php',
 
 	// Classes
-	'BugBuster\Xing\XingImage'       => 'system/modules/xing/classes/XingImage.php',
-	'BugBuster\Xing\DCA_xing'        => 'system/modules/xing/classes/DCA_xing.php',
-	'BugBuster\Xing\DCA_module_xing' => 'system/modules/xing/classes/DCA_module_xing.php',
+	'BugBuster\Xing\XingImage'     => 'system/modules/xing/classes/XingImage.php',
+	'BugBuster\Xing\DcaXing'       => 'system/modules/xing/classes/DcaXing.php',
+	'BugBuster\Xing\DcaModuleXing' => 'system/modules/xing/classes/DcaModuleXing.php',
 ));
 
 
