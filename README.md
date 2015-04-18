@@ -5,6 +5,9 @@ Contao Module Xing
 
 [![SensioLabsInsight](https://insight.sensiolabs.com/projects/65d655e9-4637-4f7a-8a5d-0b1828e41d24/small.png)](https://insight.sensiolabs.com/projects/65d655e9-4637-4f7a-8a5d-0b1828e41d24)
 
+## About
+Adding XING banner as a module, with categories.
+
 ## Branches
 
 **master** This is the current stable branch for Contao 3.x
