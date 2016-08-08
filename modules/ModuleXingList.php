@@ -121,7 +121,7 @@ class ModuleXingList extends \Module
 
 			if ($GLOBALS['objPage']->outputFormat == 'html5')
 			{
-				$this->xing_images = \String::toHtml5($this->xing_images);
+				$this->xing_images = \StringUtil::toHtml5($this->xing_images);
 				$arrXing[] = array
 				(
 	                'xingprofil' => trim($objXing->xingprofil),
